@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class MergeSort {
+	/**
+	 * @param stuArr An array of students
+	 * @param comp a comparator I don't really know why we use
+	 */
 	public static void sortStudents(ArrayList<Student> stuArr, Comparator<Student> comp) {
 		
 		if(stuArr == null || stuArr.size() <= 1) {

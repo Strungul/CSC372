@@ -11,6 +11,8 @@ public class Driver {
 		
 		CompareByRollNo comp = new CompareByRollNo();
 		
+		try {
+		
 		studentsArr.add( newStudent("John Doe", "101 Maple Street"));
 		studentsArr.add( newStudent("Jane Dee", "202 Oak Avenue"));
 		studentsArr.add( newStudent("Jorf Doen", "303 Pine Road"));
@@ -22,6 +24,12 @@ public class Driver {
 		studentsArr.add( newStudent("Sweeny Todd", "123 Fake Avenue"));
 		studentsArr.add( newStudent("Tyler Durdin", "123 Fake Avenue"));
 		studentsArr.add( newStudent("Shell Silverstein", "123 Fake Avenue"));
+		studentsArr.add( newStudent( null,"123 Fake Avenue"));
+		}
+		
+		catch (IllegalArgumentException e) {
+			System.out.println(e);
+		}
 		
 		System.out.println("Here are the students in order of creation.\n");
 		for (Student s: studentsArr) {
@@ -43,6 +51,11 @@ public class Driver {
 
 	}
 	
+	/**
+	 * @param name the full name of the student
+	 * @param address the student's address
+	 * @return a new Student object with name, address and a randomized RollNumber
+	 */
 	public static Student newStudent(String name, String address) {
 		Student newStu = new Student(name, address);
 		for (Student s:studentsArr) {

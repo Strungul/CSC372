@@ -13,7 +13,18 @@ public class Student {
 		this.address = "No Address Provided";
 	}
 	
+	/**
+	 * @param name Student's name
+	 * @param address  Student's Address
+	 */
 	public Student (String name, String address) {
+		if (name == null) {
+			throw new IllegalArgumentException("Name cannot be null");
+		}
+		
+		if (address == null) {
+			throw new IllegalArgumentException("Address cannot be null");
+		}
 		
 		//I initially made this as an incrementing number, as I probably would in a real program, but this is more fun for a sorting program.
 		this.rollno = new Random().nextInt(900_000) + 100_000;

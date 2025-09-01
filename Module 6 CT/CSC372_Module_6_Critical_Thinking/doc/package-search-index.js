@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"CSC372_Module_6_Critical_Thinking","l":"ct6"}];updateSearchResults();
